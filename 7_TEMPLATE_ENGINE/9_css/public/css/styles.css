@@ -1,0 +1,28 @@
+body {
+    background-color: #333;
+    color: white
+}
+h1 {
+    color: rgb(243, 165, 165);
+    text-transform: uppercase;
+}
+
+h2 {
+    color: rgb(227, 243, 133);
+    text-transform: uppercase;
+}
+
+
+p {
+    color: rgb(107, 107, 236);
+}
+
+a {
+    text-decoration: dotted;
+    color: #ccc;
+    font-size: 1.5em;
+    background-color: #666;
+    padding: 5px 20px;
+    border-radius: 3px;
+    border: 1px solid rgb(227, 243, 133);
+}

@@ -10,7 +10,7 @@ const hbs = exphbs.create({
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 
-app.use('/public', express.static('public'))
+app.use(express.static('public'))
 
 app.get('/dashboard', (req, res) => {
 
