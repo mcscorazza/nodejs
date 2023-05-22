@@ -1,6 +1,8 @@
 import express from 'express'
 import exphbs from 'express-handlebars'
-import conn from './db/conn.mjs'
+import { conn } from './db/conn.js'
+
+import {User} from './models/User.js'
 
 const app = express()
 
@@ -25,4 +27,8 @@ app.get('/', (req,res) =>{
     res.render('home')
 })
 
-app.listen(3000)
+conn.sync().then(() => {
+    app.listen(3000)
+}).catch((err) => {
+    console.log(err)
+})
