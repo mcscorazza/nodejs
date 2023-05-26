@@ -1,5 +1,5 @@
 <h1>Editando: {{user.name}}</h1>
-<form action="/users/edit" method="POST">
+<form class="form" action="/users/update" method="POST">
 <input type="text" name="id" value="{{user.id}}">
 <div class="form-control">
     <label for="name">Nome:</label>
@@ -18,14 +18,13 @@
     
     <label for="newsletter">Enviar Promoções?</label>
 </div>
-
-<input type="submit" value="Editar">
+    <input type="submit" value="Editar">
 </form>
 
 <div class="address-container">
     <h2>Endereços:</h2>
-    <form action="/address/create" method="POST">
-        <input type="hidden" name="userid" value="{{user.id}}">
+    <form  class="form"  action="/address/create" method="POST">
+        <input type="hidden" name="UserId" value="{{user.id}}">
         <div class="form-control">
             <label for="street">Rua:</label>
             <input type="text" name="street" placeholder="Digite a rua">
@@ -38,6 +37,12 @@
             <label for="city">Cidade:</label>
             <input type="text" name="city" placeholder="Digite a cidade">
         </div>
-        <input type="submit" value="Cadastrar">
+        <input type="submit" value="Incluir Endereço">
     </form>
+    <div class="address-list">
+        <h2>Lista de endereços:</h2>
+        {{#each user.Addresses }}
+            <p># {{this.id}} - {{this.street}}, {{this.number}} - {{this.city}} </p>
+        {{/each}}
+    </div>
 </div>

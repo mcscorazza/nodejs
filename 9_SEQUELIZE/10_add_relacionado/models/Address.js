@@ -3,7 +3,6 @@ import { conn } from '../db/conn.js'
 
 import { User } from './User.js'
 
-
 export const Address = conn.define('Address' , {
 
     street: {
@@ -22,4 +21,5 @@ export const Address = conn.define('Address' , {
     },
 })
 
+User.hasMany(Address)
 Address.belongsTo(User)

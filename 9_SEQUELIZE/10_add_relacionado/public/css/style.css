@@ -27,8 +27,8 @@ h1 {text-align: center;}
     text-decoration: none;
 }
 
-form {
-    width: 450px;
+.form {
+    width: 500px;
     margin: 0 auto;
 }
 
@@ -81,7 +81,8 @@ form {
 .actions {
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 8px;
 }
 
 .actions a,
@@ -94,7 +95,7 @@ form {
     font-size: 15px;
     color: #000;
     cursor: pointer;
-    width: 90%;
+    width: 80%;
     text-align: center;
 }
 
@@ -102,15 +103,23 @@ form {
 .actions .details-btn {
     border-color: #004085;
     color: #004085;
+    width: 100%;
+}
+
+.actions .edit-btn {
+    border-color: #00a545;
+    color: #00a545;
+    width: 100%;
 }
 
 .actions .delete-btn {
     border-color: #721c24;
     color: #721c24;
+    width: 100%;
 }
 
 .address-container {
-    max-width: 1000px;
+    max-width: 600px;
     margin: 1em auto;
     padding-top: 1em;
     border-top: 1px solid #ccc;
@@ -121,5 +130,5 @@ form {
 }
 
 .address-container form {
-    width: 300px;
+    width: 500px;
 }
