@@ -20,7 +20,7 @@ export default class TaskController {
     static async removeTask(req,res) {
         const id = req.body.id
         await Task.destroy({where: {id:id}})
-        res.redirect('tasks')
+        res.redirect('/tasks')
     }
 
     static async updateTask(req,res) {
