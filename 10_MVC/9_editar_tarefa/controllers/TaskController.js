@@ -14,7 +14,7 @@ export default class TaskController {
 
         await Task.create(task)
 
-        res.redirect('tasks')
+        res.redirect('/tasks')
     }
 
     static async removeTask(req,res) {
